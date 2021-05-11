@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNewTask"
+    android:background="@color/Dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/MainTitleDarkBlue">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:text="@string/title1"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+        </RelativeLayout> <!-- Title -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/MainTitleBlue">
+
+            <ImageButton
+                android:id="@+id/btnBack_id"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/ic_action_name_1" /> <!-- Save button -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:text="@string/add_new_task"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </RelativeLayout> <!-- Sub-title -->
+        <RelativeLayout
+            android:id="@+id/titleLayout_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:padding="10dp"
+                    android:text="@string/title"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etTitle_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:autofillHints=""
+                    android:elevation="2dp"
+                    android:inputType="text"
+                    android:shadowColor="@color/white"
+                    android:textColor="@color/white"
+                    tools:ignore="LabelFor"
+                    tools:targetApi="lollipop" />
+            </LinearLayout>
+        </RelativeLayout> <!-- Insert title -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:padding="10dp"
+                    android:text="@string/description"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etDesc_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:autofillHints=""
+                    android:elevation="2dp"
+                    android:hint="@string/please_write_description"
+                    android:inputType="text"
+                    android:scrollbarSize="150dp"
+                    android:shadowColor="@color/white"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="14sp"
+                    tools:ignore="LabelFor"
+                    tools:targetApi="lollipop" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:padding="10dp"
+                    android:text="@string/due_date"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etDate_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:elevation="2dp"
+                    android:focusable="false"
+                    android:hint="@string/click_to_add_due_date"
+                    android:inputType="date"
+                    android:shadowColor="@color/white"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="14sp"
+                    tools:targetApi="lollipop" />
+            </LinearLayout>
+        </RelativeLayout> <!-- Insert date -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:padding="10dp"
+                    android:text="@string/urgency"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spDropdown_id"
+                    android:layout_width="275dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="15dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
+                    android:spinnerMode="dropdown"
+                    android:src="@drawable/spinner"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+            </LinearLayout>
+        </RelativeLayout> <!-- Insert urgency -->
+        <Button
+            android:id="@+id/btnSave_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:background="@drawable/button_shape"
+            android:text="@string/save"
+            android:textColor="@color/white" /> <!-- Save button -->
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

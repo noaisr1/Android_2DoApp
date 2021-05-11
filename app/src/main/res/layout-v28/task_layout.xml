@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/Dark">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/TaskTitleTV_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:layout_margin="4dp"
+            android:text ="@string/title"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id = "@+id/btnDelete_id"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:text="@string/x"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="2dp"
+            android:textSize="14sp"
+            android:background="@drawable/x_button_shape"
+            android:textColor="#FFFFFF"
+            android:layout_margin="4dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="2dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout1">
+        <TextView
+            android:id="@+id/tvDueDateTitle_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/to"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" />
+        <TextView
+            android:id="@+id/tvDueDate_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tvDueDateTitle_id"
+            android:hint="01/01/2030"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@id/tvDueDateTitle_id"
+            android:layout_marginStart="10dp" />
+        <TextView
+            android:id="@+id/tvUrgency_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/urgency"
+            android:textSize="12sp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_toRightOf="@id/tvDueDate_id"
+            android:layout_toEndOf="@id/tvDueDate_id" />
+        <TextView
+            android:id="@+id/tvUrgVal_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tvUrgency_id"
+            android:hint="@string/low"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@id/tvUrgency_id"
+            android:layout_marginStart="10dp" />
+
+        <ImageButton
+            android:id="@+id/btnUpdate_id"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/info_button_shape"
+            android:contentDescription="@string/update_button"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_action_name"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp" />
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swDone_id"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="@string/done"
+            android:textColor="@color/white"
+            android:outlineSpotShadowColor="@color/white"
+            android:layout_toRightOf="@id/tvUrgVal_id"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_toEndOf="@id/tvUrgVal_id" />
+
+    </RelativeLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">TasksListFinalProject</string>
+    <string name="title1">2DO List</string>
+    <string name="ForTodayTitle">Due to today</string>
+    <string name="EmptyList">Nothing to do!</string>
+    <string name="UpcomingTitle">Upcoming</string>
+    <string name="AddNewTask">Add</string>
+    <string name="item">item</string>
+    <string name="subitem">subItem</string>
+    <string name="update">Update</string>
+    <string name="title">Title</string>
+    <string name="add_new_task">Add new Task</string>
+    <string name="due_date">Due date:</string>
+    <string name="select">Select</string>
+    <string name="urgency">Urgency:</string>
+    <string name="set_due_date">Set due date</string>
+    <string name="select_urg">Select urgency</string>
+    <string name="description">Description:</string>
+    <string name="write_description_here">Write description here</string>
+    <string name="save">Save</string>
+    <string name="done">Done?</string>
+    <string name="click_to_add_due_date">Click to add due date</string>
+    <string name="to">To:</string>
+    <string name="Delete">X</string>
+    <string name="update_button">Update button</string>
+    <string name="x">x</string>
+    <string name="urgency1">Urgency</string>
+    <string name="low">Low</string>
+    <string name="add_">+</string>
+    <string name="please_write_description">Please write description</string>
+    <string name="title_activity_bottom_navigation">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_fragment">Home Fragment</string>
+    <string name="done_fragment">Done Fragment</string>
+    <string name="home">Home</string>
+    <string name="already_done">Already done</string>
+</resources>

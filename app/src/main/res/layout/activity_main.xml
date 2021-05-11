@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/Dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/MainTitleDarkBlue">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title1"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@drawable/frame">
+                    <TextView
+                        android:id="@+id/tvTodayTitle_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ForTodayTitle"
+                        android:layout_marginHorizontal="2dp"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_margin="2dp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/title_shape"
+                        android:padding="10dp"/>
+
+                    <ListView
+                        android:id="@+id/lvTodayTasks_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:layout_below="@+id/tvTodayTitle_id"
+                        tools:ignore="NestedScrolling" />
+                    <TextView
+                        android:id="@+id/tvEmptyTodayTasks_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/EmptyList"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/white"
+                        android:visibility="gone"
+                        android:textSize="16sp"
+                        android:layout_below="@+id/tvTodayTitle_id"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@drawable/frame">
+
+                    <TextView
+                        android:id="@+id/tvUpcomingTitle_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/UpcomingTitle"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:layout_margin="2dp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/title_shape"/>
+
+                    <ListView
+                        android:id="@+id/lvUpcomingTasks_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:layout_below="@+id/tvUpcomingTitle_id"
+                        tools:ignore="NestedScrolling" />
+                    <TextView
+                        android:id="@+id/tvEmptyUpcomingTasks_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/EmptyList"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:layout_margin="10dp"
+                        android:visibility="gone"
+                        android:layout_below="@+id/tvUpcomingTitle_id"/>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|end"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-35dp"
+        >
+
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragment"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:defaultNavHost="true"
+                app:layout_constraintBottom_toTopOf="@id/bottomNavView_id"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf = "parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:navGraph="@navigation/my_nav"
+                tools:layout_editor_absoluteY="675dp" />
+
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavView_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                app:itemIconTint="@color/MainTitleBlue"
+                app:itemTextColor="@color/MainTitleBlue"
+                app:itemBackground="@color/Dark"
+                app:menu="@menu/bottom_menu" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAdd_id"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="15dp"
+            android:background="@drawable/add_button_shape"
+            android:layout_above="@id/bottomNavView_id"
+            android:text="@string/add_"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
